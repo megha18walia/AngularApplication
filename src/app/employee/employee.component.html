@@ -1,0 +1,85 @@
+<table>
+    <thead>
+        <tr>
+        <th attr.colspan="{{Colspan}}">
+                Employee Details
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><b>First Name</b></td>
+        <td>{{FirstName}}</td>
+    </tr>
+    <tr>
+        <td><b>Last Name</b></td>
+        <td>{{LastName}}</td>
+    </tr>
+    <tr >
+        <td><b>Gender</b></td>
+        <td>{{Gender}}</td>
+    </tr>
+    <tr >
+        <td><b>Age</b></td>
+        <td>{{Age}}</td>
+    </tr>
+    <tr>
+        <td>
+            <studentInfo *ngIf = 'ShowDetails'></studentInfo>
+            <br />
+            <button (click) = "ShowHideDetails()">{{ShowDetails ? 'Hide Details' : 'Show Details'}}</button>
+        </td>
+        <td>
+                <input button [class] = "ClassesToApply"  value="Property Binding" [disabled] = "IsDisabled" />
+        </td>
+    </tr>
+    <tr>
+        <td attr.colspan="{{Colspan}}">
+            <employeeList></employeeList>
+        </td>
+    </tr>
+    <tr>
+        <td>
+                <input button [class.colorClass] = "!Apply"  value="Class Binding" />
+        </td>
+        <td>
+                <input button [ngClass] = "addClasses()" value="ngClass Binding" />
+            </td>
+    </tr>
+    <tr>
+        <td>
+            <input button style="color:red" [style.fontWeight] = "isBold ? 'bold' : 'normal'" value="Style Binding"/>
+        </td>
+        <td>
+            <input button [style.fontSize.px] = "fontsize" value="Font size Pixel" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input button [ngStyle] = "addStyles()" value="Multiple Style" />
+        </td>
+        <td>
+            <input button (click) = "onClick()"  value = "Click Me"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input button on-click = "onClick()" value="Canonical binding" />
+        </td>
+       <td>
+           <input type="text" name="text1" [value] = "Name" (input) = 'Name = $event.target.value' />
+           <br />
+           You entered : {{Name}}
+       </td>
+       
+    </tr>
+  <tr>
+      <td>
+          <input type="text" [(ngModel)] = "Name" />
+          <br />
+          You Entered : {{Name}}
+      </td>
+  </tr>
+
+</tbody>
+</table>

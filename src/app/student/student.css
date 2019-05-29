@@ -1,0 +1,13 @@
+td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    border: 2px dashed aqua;
+    text-align: center;
+    
+}
+
+img
+{
+    width: 100px;
+    height: 100px
+}

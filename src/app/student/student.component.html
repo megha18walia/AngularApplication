@@ -1,0 +1,33 @@
+<table>
+    <tr>
+        <td>
+            <b> Student name</b>
+        </td>
+        <td>
+            {{StudentName}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Student Age</b>
+        </td>
+        <td>
+            {{Age}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"> 
+            {{Age < 18 ? "School Information" : "College Information"}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img src= '{{getImageURL()}}' />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <employeeTest></employeeTest>
+        </td>
+    </tr>
+</table>

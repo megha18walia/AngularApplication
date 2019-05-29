@@ -1,0 +1,21 @@
+td{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: 1px solid Red;
+}
+
+thead th{
+  border: 1px solid black;  
+}
+.boldClass
+{
+    font-weight: bold;
+}
+.italicClass
+{
+    font-style: italic;
+}
+.colorClass
+{
+    color : blue;
+}

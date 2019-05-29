@@ -1,0 +1,78 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Employee Code
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Age
+            </th>
+            <th>
+                Employee Salary
+            </th>
+            <th>
+                Employee Location
+            </th>
+            <th>
+                Employee Date Of Birth
+            </th>
+            <th>
+                Index
+            </th>
+            <th>
+                First
+            </th>
+            <th>
+                Last
+            </th>
+            <th>
+                Even
+            </th>
+            <th>
+                Odd
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees;TrackBy:TrackById; let ind = index; let isFirst = first; let isLast = last; let isEven = even; let isOdd= odd">
+            <td>
+                {{employee.code}}
+            </td>
+            <td>
+                {{employee.name | Salutation : employee.age}}
+            </td>
+            <td>
+                {{employee.age}}
+            </td>
+            <td>
+                {{employee.salary|currency : 'USD' : true : '1.3-3' }}
+            </td>
+            <td>
+                {{employee.location}}
+            </td>
+            <td>
+                {{employee.dateofbirth | date : "fullDate" | uppercase}}
+            </td>
+            <td>
+                {{ind}}
+            </td>
+            <td>
+                {{isFirst}}
+            </td>
+            <td>
+                {{isLast}}
+            </td>
+            <td>
+                {{isEven}}
+            </td>
+            <td>
+                {{isOdd}}
+            </td>
+        </tr> 
+    </tbody>
+</table>
+
+<button name="Refresh"  (click) = "getEmployee()">Refresh grid</button>
