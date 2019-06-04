@@ -13,10 +13,12 @@ import {gridComponent} from './Grid/grid.component';
 import { SalutationPipe } from "./Grid/SalutationPipe";
 import {employeetest} from "./empdata/employeetest.component";
 import {empradio} from "./empdata/empradio.component"
+import {LifeCycle} from "./LifeCycleHooks/LifeCycle" 
 
 @NgModule({
   declarations: [
-    AppComponent , employeeComponent, studentComponent, gridComponent, SalutationPipe, employeetest, empradio
+    AppComponent , employeeComponent, studentComponent, gridComponent, SalutationPipe, employeetest, 
+    empradio, LifeCycle
   ],
   imports: [
     BrowserModule,
